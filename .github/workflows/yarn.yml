@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+      - name: Deploy
+        env:
+          G_TOKEN: ${{ secrets.PUSH_TOKEN }}
+        run: |
+          npm install
+          npm run build --if-present
+          cd docs/.vuepress/dist
+          git init
+          git config user.name freecracy
+          git config user.email 12114073+freecracy@users.noreply.github.com
+          git add -A
+          git commit -m 'deploy'
+          git push -f https://${G_TOKEN}@github.com/freecracy/daily.git master:online
