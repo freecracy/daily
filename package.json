@@ -15,7 +15,9 @@
     "vuepress-auto-sidebar": "^1.1.1",
     "vuepress-bar": "^0.3.5",
     "vuepress-plugin-auto-sidebar": "^1.5.0",
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-qrcode": "^1.0.7",
+    "vuepress-plugin-toolbar": "^1.0.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",
