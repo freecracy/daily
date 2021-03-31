@@ -29,22 +29,6 @@ module.exports = {
         size: "small",
       },
     ],
-    [
-      "vuepress-plugin-toolbar",
-      {
-        opts: [
-          {
-            icon: "",
-            name: "文本展示",
-            popover: {
-              type: "text",
-              title: "纯文本说明",
-              text: "这是一个纯文本的内容展示，就是一段话",
-            },
-          },
-        ],
-      },
-    ],
   ],
   head: [["meta", { name: "referrer", content: "no-referrer" }]],
   markdown: {
